@@ -342,7 +342,26 @@ document.getElementById("letra").addEventListener("keyup", function(event){
 
     }
 
+    function iniciarJogo(){
+
+    document.getElementById("menu").style.display="none";
+
+    document.getElementById("jogo").style.display="block";
+
+    novoJogo();
+
+}
+function voltarMenu(){
+
+    document.getElementById("menu").style.display="flex";
+
+    document.getElementById("jogo").style.display="none";
+
+}
+
 });
+
+
 
 carregarRanking();
 novoJogo();
