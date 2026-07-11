@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jogo da Forca</title>
+
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 Jogo da Forca</h1>
+
+<div class="painel">
+
+    <h3>Pontos: <span id="pontos">0</span></h3>
+
+    <h3>Tempo: <span id="tempo">60</span>s</h3>
+
+</div>
+
+<h2>🏆 Ranking</h2>
+
+<ol id="ranking"></ol>
+
+<div class="forca">
+
+    <div class="poste"></div>
+
+    <div class="topo"></div>
+
+    <div class="corda"></div>
+
+    <div id="cabeca" class="parte"></div>
+
+    <div id="corpo" class="parte"></div>
+
+    <div id="bracoE" class="parte"></div>
+
+    <div id="bracoD" class="parte"></div>
+
+    <div id="pernaE" class="parte"></div>
+
+    <div id="pernaD" class="parte"></div>
+
+</div>
+
+<h2 id="palavra"></h2>
+
+<input
+type="text"
+id="letra"
+maxlength="1"
+placeholder="A">
+
+<label for="nivel">Dificuldade:</label>
+
+<select id="nivel">
+
+    <option value="facil">Fácil</option>
+
+    <option value="medio">Médio</option>
+
+    <option value="dificil">Difícil</option>
+
+</select>
+
+<h3 id="dica"></h3>
+
+<button onclick="jogar()">
+Tentar
+</button>
+
+<button onclick="novoJogo()">
+Novo Jogo
+</button>
+
+<h3 id="erros"></h3>
+
+<p id="mensagem"></p>
+
+</div>
+
+<script src="/js/palavras.js"></script>
+<script scr="/js/script.js"></script>
+
+<script src="/script.js"></script>
+
+</body>
+</html>
