@@ -175,3 +175,19 @@ animation:brilho 3s infinite;
     gap:20px;
 
 }
+
+#menu{
+    display:none;
+}
+
+#perfil{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}

@@ -2,6 +2,7 @@ const somAcerto = new Audio("/audio/acerto.mp3");
 const somErro = new Audio("/audio/erro.mp3");
 const somVenceu = new Audio("/audio/venceu.mp3");
 const somPerdeu = new Audio("/audio/perdeu.mp3");
+let nomeJogador = "";
 
 const palavras = [
     "NODE",
@@ -152,6 +153,31 @@ somPerdeu.play();
 
 }
 
+function entrarJogo(){
+
+    nomeJogador =
+    document.getElementById("nomeJogador")
+    .value
+    .trim();
+
+    if(nomeJogador===""){
+
+        alert("Digite seu nome!");
+
+        return;
+
+    }
+
+    localStorage.setItem("nomeJogador",nomeJogador);
+
+    document.getElementById("perfil").style.display="none";
+
+    document.getElementById("menu").style.display="flex";
+
+    document.getElementById("nomeTela").textContent = nomeJogador;
+
+}
+
 
 function jogar(){
 
@@ -261,7 +287,7 @@ function iniciarTempo(){
 
 async function salvarRanking(){
 
-    const nome = prompt("Digite seu nome:");
+    const nome = nomeJogador;
 
     await fetch("/ranking",{
 
@@ -289,18 +315,10 @@ async function salvarRanking(){
 
 function mostrarRanking(){
 
-    let ranking =
-    JSON.parse(localStorage.getItem("ranking")) || [];
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("jogo").style.display = "block";
 
-    let lista="";
-
-    ranking.forEach(p=>{
-
-        lista += "<li>"+p+" pontos</li>";
-
-    });
-
-    document.getElementById("ranking").innerHTML = lista;
+    carregarRanking();
 
 }
 
@@ -337,31 +355,45 @@ async function carregarRanking(){
 document.getElementById("letra").addEventListener("keyup", function(event){
 
     if(event.key === "Enter"){
-
         jogar();
-
     }
 
-    function iniciarJogo(){
+});
 
-    document.getElementById("menu").style.display="none";
+function iniciarJogo(){
 
-    document.getElementById("jogo").style.display="block";
+    document.getElementById("menu").style.display = "none";
+    document.getElementById("jogo").style.display = "block";
 
     novoJogo();
 
 }
+
 function voltarMenu(){
 
-    document.getElementById("menu").style.display="flex";
-
-    document.getElementById("jogo").style.display="none";
+    document.getElementById("jogo").style.display = "none";
+    document.getElementById("menu").style.display = "flex";
 
 }
 
-});
+window.onload = () => {
 
+    const salvo = localStorage.getItem("nomeJogador");
 
+    if(salvo){
+
+        nomeJogador = salvo;
+
+        document.getElementById("nomeTela").textContent = nomeJogador;
+
+        document.getElementById("perfil").style.display = "none";
+        document.getElementById("menu").style.display = "flex";
+
+    }
+
+    carregarRanking();
+
+};
 
 carregarRanking();
 novoJogo();

@@ -1,68 +1,140 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Jogo da Forca</title>
 
 <link rel="stylesheet" href="/style.css">
+
 </head>
 
 <body>
 
-    <div id="menu">
+<!-- PERFIL -->
 
-    <h1>JOGO DA FORCA</h1>
+<div id="perfil" class="perfil">
 
-    <button onclick="iniciarJogo()">
-        🎮 Jogar
-    </button>
+<h1>🎮 JOGO DA FORCA</h1>
 
-    <button onclick="mostrarRanking()">
-        🏆 Ranking
-    </button>
+<h2>Digite seu nome</h2>
 
-    <button onclick="voltarMenu()">
-🏠 Menu
+<input
+type="text"
+id="nomeJogador"
+placeholder="Seu nome">
+
+<button onclick="entrarJogo()">
+
+Entrar
+
 </button>
 
 </div>
 
-<div class="container">
+<!-- MENU -->
+
+<div id="menu" style="display:none;">
+
+<h1>🎮 JOGO DA FORCA</h1>
+
+<button onclick="iniciarJogo()">
+
+🎮 Jogar
+
+</button>
+
+<button onclick="mostrarRanking()">
+
+🏆 Ranking
+
+</button>
+
+</div>
+
+<!-- JOGO -->
+
+<div id="jogo" class="container" style="display:none;">
 
 <h1>🎮 Jogo da Forca</h1>
 
 <div class="painel">
 
-    <h3>Pontos: <span id="pontos">0</span></h3>
+<h3>
 
-    <h3>Tempo: <span id="tempo">60</span>s</h3>
+👤 Jogador:
+<span id="nomeTela"></span>
+
+</h3>
+
+<h3>
+
+⭐ Pontos:
+<span id="pontos">0</span>
+
+</h3>
+
+<h3>
+
+⏰ Tempo:
+<span id="tempo">60</span>s
+
+</h3>
 
 </div>
 
-<h2>🏆 Ranking</h2>
+<label>
 
-<ol id="ranking"></ol>
+Dificuldade
+
+</label>
+
+<select id="nivel">
+
+<option value="facil">
+
+Fácil
+
+</option>
+
+<option value="medio">
+
+Médio
+
+</option>
+
+<option value="dificil">
+
+Difícil
+
+</option>
+
+</select>
+
+<h3 id="dica"></h3>
 
 <div class="forca">
 
-    <div class="poste"></div>
+<div class="poste"></div>
 
-    <div class="topo"></div>
+<div class="topo"></div>
 
-    <div class="corda"></div>
+<div class="corda"></div>
 
-    <div id="cabeca" class="parte"></div>
+<div id="cabeca" class="parte"></div>
 
-    <div id="corpo" class="parte"></div>
+<div id="corpo" class="parte"></div>
 
-    <div id="bracoE" class="parte"></div>
+<div id="bracoE" class="parte"></div>
 
-    <div id="bracoD" class="parte"></div>
+<div id="bracoD" class="parte"></div>
 
-    <div id="pernaE" class="parte"></div>
+<div id="pernaE" class="parte"></div>
 
-    <div id="pernaD" class="parte"></div>
+<div id="pernaD" class="parte"></div>
 
 </div>
 
@@ -72,40 +144,44 @@
 type="text"
 id="letra"
 maxlength="1"
-placeholder="A">
+placeholder="Digite uma letra">
 
-<label for="nivel">Dificuldade:</label>
-
-<select id="nivel">
-
-    <option value="facil">Fácil</option>
-
-    <option value="medio">Médio</option>
-
-    <option value="dificil">Difícil</option>
-
-</select>
-
-<h3 id="dica"></h3>
+<br><br>
 
 <button onclick="jogar()">
+
 Tentar
+
 </button>
 
 <button onclick="novoJogo()">
+
 Novo Jogo
+
+</button>
+
+<button onclick="voltarMenu()">
+
+🏠 Menu
+
 </button>
 
 <h3 id="erros"></h3>
 
 <p id="mensagem"></p>
 
+<hr>
+
+<h2>🏆 Ranking</h2>
+
+<ol id="ranking"></ol>
+
 </div>
 
 <script src="/js/palavras.js"></script>
-<script scr="/js/script.js"></script>
 
 <script src="/script.js"></script>
 
 </body>
+
 </html>
