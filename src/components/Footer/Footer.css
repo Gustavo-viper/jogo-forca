@@ -1,0 +1,169 @@
+.footer{
+    background:#111827;
+    padding:70px 8% 30px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-container{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:60px;
+
+}
+
+.footer-brand h2{
+
+    color:white;
+    font-size:34px;
+    margin-bottom:20px;
+
+}
+
+.footer-brand span{
+
+    color:#22C55E;
+
+}
+
+.footer-brand p{
+
+    color:#CBD5E1;
+    line-height:1.8;
+    max-width:420px;
+
+}
+
+.footer-links h3,
+.footer-contact h3{
+
+    color:white;
+    margin-bottom:20px;
+
+}
+
+.footer-links ul{
+
+    list-style:none;
+    padding:0;
+
+}
+
+.footer-links li{
+
+    margin-bottom:14px;
+
+}
+
+.footer-links a{
+
+    color:#CBD5E1;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#22C55E;
+
+}
+
+.footer-contact p{
+
+    color:#CBD5E1;
+    margin-bottom:14px;
+
+}
+
+.footer-bottom{
+
+    max-width:1200px;
+    margin:50px auto 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+.footer-bottom p{
+
+    color:#94A3B8;
+    font-size:14px;
+
+}
+
+/* =========================
+        TABLET
+========================= */
+
+@media(max-width:1024px){
+
+.footer{
+
+    padding:60px 5% 25px;
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+}
+
+.footer-brand{
+
+    grid-column:1 / -1;
+
+}
+
+}
+
+/* =========================
+        CELULAR
+========================= */
+
+@media(max-width:768px){
+
+.footer{
+
+    padding:50px 20px 20px;
+
+}
+
+.footer-container{
+
+    grid-template-columns:1fr;
+    gap:35px;
+    text-align:center;
+
+}
+
+.footer-brand p{
+
+    max-width:100%;
+
+}
+
+.footer-links ul{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+.footer-bottom{
+
+    margin-top:35px;
+
+}
+
+}

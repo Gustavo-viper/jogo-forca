@@ -1,0 +1,151 @@
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+
+    background:
+    radial-gradient(circle at center,#0f0f12 0%,#080808 55%,#000 100%);
+}
+
+.glow{
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#00ff88;
+
+    filter:blur(220px);
+
+    opacity:.15;
+
+    animation:pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse{
+
+0%,100%{
+
+transform:translate(-50%,-50%) scale(1);
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.2);
+
+}
+
+}
+.particles span{
+
+position:absolute;
+
+width:4px;
+height:4px;
+
+background:#00ff88;
+
+border-radius:50%;
+
+animation:float 12s linear infinite;
+
+opacity:.7;
+
+}
+
+.particles span:nth-child(1){left:5%;animation-delay:1s;top:90%;}
+.particles span:nth-child(2){left:15%;animation-delay:2s;top:80%;}
+.particles span:nth-child(3){left:25%;animation-delay:4s;top:95%;}
+.particles span:nth-child(4){left:35%;animation-delay:6s;top:85%;}
+.particles span:nth-child(5){left:45%;animation-delay:3s;top:90%;}
+.particles span:nth-child(6){left:55%;animation-delay:7s;top:75%;}
+.particles span:nth-child(7){left:65%;animation-delay:2s;top:95%;}
+.particles span:nth-child(8){left:75%;animation-delay:5s;top:82%;}
+.particles span:nth-child(9){left:85%;animation-delay:1s;top:88%;}
+.particles span:nth-child(10){left:95%;animation-delay:4s;top:96%;}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-110vh);
+
+opacity:0;
+
+}
+
+}
+
+.fragment{
+
+position:absolute;
+
+width:8px;
+height:8px;
+
+background:#00ff88;
+
+transform:rotate(45deg);
+
+opacity:.3;
+
+animation:fragmentMove 15s linear infinite;
+
+}
+
+.fragments .fragment:nth-child(1){left:8%;top:95%;}
+.fragments .fragment:nth-child(2){left:20%;top:85%;}
+.fragments .fragment:nth-child(3){left:30%;top:92%;}
+.fragments .fragment:nth-child(4){left:40%;top:88%;}
+.fragments .fragment:nth-child(5){left:55%;top:95%;}
+.fragments .fragment:nth-child(6){left:65%;top:82%;}
+.fragments .fragment:nth-child(7){left:75%;top:90%;}
+.fragments .fragment:nth-child(8){left:90%;top:96%;}
+
+@keyframes fragmentMove{
+
+0%{
+
+transform:translateY(0) rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:.3;
+
+}
+
+100%{
+
+transform:translateY(-120vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}

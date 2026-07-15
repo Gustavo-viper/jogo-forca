@@ -1,0 +1,194 @@
+.contact{
+    padding:100px 8%;
+    background:#0F172A;
+}
+
+.contact-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.contact-title span{
+    color:#38BDF8;
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.contact-title h2{
+    color:#fff;
+    font-size:clamp(34px,5vw,50px);
+    margin:15px 0;
+}
+
+.contact-title p{
+    color:#CBD5E1;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.contact-container{
+
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info{
+
+    background:#1E293B;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.contact-info h3{
+
+    color:#22C55E;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.contact-info p{
+
+    color:#CBD5E1;
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+}
+
+.contact-form{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1E293B;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.contact-form textarea{
+
+    min-height:180px;
+
+    resize:none;
+
+}
+
+.contact-form button{
+
+    background:#22C55E;
+
+    color:white;
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.contact-form button:hover{
+
+    background:#16A34A;
+
+    transform:translateY(-3px);
+
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+.contact{
+
+    padding:80px 5%;
+
+}
+
+.contact-container{
+
+    gap:30px;
+
+}
+
+}
+
+/* Celular */
+
+@media(max-width:768px){
+
+.contact{
+
+    padding:60px 20px;
+
+}
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-info{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+}
